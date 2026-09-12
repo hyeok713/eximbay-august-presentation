@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Builder 프로필</title>
+  <desc id="desc">주황색 코드 배지와 후드 재킷을 착용한 빌더 일러스트</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b2d16"/>
+      <stop offset="1" stop-color="#091d35"/>
+    </linearGradient>
+    <linearGradient id="hood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#9a3412"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="34" fill="url(#bg)"/>
+  <path d="M21 67l52-52h58L47 99z" fill="#fb923c" opacity=".12"/>
+  <path d="M28 256c7-55 43-84 100-84s93 29 100 84" fill="url(#hood)"/>
+  <path d="M104 163h48v37h-48z" fill="#b96f4d"/>
+  <ellipse cx="128" cy="111" rx="51" ry="63" fill="#cc8560"/>
+  <path d="M78 98c1-46 21-66 52-66 34 0 55 24 49 70-11-21-27-30-48-30-19 0-36 9-53 26z" fill="#101923"/>
+  <path d="M79 103c-10 0-13 12-8 23 3 6 8 9 14 8l-2-30zM177 103c10 0 13 12 8 23-3 6-8 9-14 8l2-30z" fill="#b96f4d"/>
+  <path d="M98 110c8-5 16-5 23 0M137 110c8-5 16-5 23 0" fill="none" stroke="#32221f" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="111" cy="118" r="3.5" fill="#181312"/>
+  <circle cx="149" cy="118" r="3.5" fill="#181312"/>
+  <path d="M128 121l-4 18 9 1M112 151c10 6 22 6 32 0" fill="none" stroke="#754436" stroke-width="4" stroke-linecap="round"/>
+  <path d="M70 256c3-41 19-70 39-82l19 25 19-25c20 12 36 41 39 82" fill="#152d47"/>
+  <path d="M97 177l31 22 31-22 16 18-24 31-23-27-23 27-24-31z" fill="#f97316" opacity=".9"/>
+  <circle cx="194" cy="198" r="25" fill="#26170f" stroke="#fb923c" stroke-width="4"/>
+  <path d="M187 188l-9 10 9 10M201 188l9 10-9 10M197 184l-7 28" fill="none" stroke="#ffd2b5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

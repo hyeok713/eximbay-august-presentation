@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Software Manufacturing Process</title>
+  <link rel="stylesheet" href="styles.css?v=0828-presenter1" />
+</head>
+<body>
+  <main id="deck" class="deck" aria-live="polite">
+    <section class="slide hero active" data-title="오프닝">
+      <div class="ambient-grid"></div>
+      <header class="slide-meta"><span>01</span><span>OPENING</span></header>
+      <div class="hero-copy">
+        <p class="eyebrow">AGENT-BASED WORKFLOW</p>
+        <h1>SOFTWARE<br><strong class="long-title">MANUFACTURING PROCESS</strong></h1>
+        <p class="lead"><b>소프트웨어 제조 공정</b><span>에이전트로 설계한 반복 가능한 개발 공정</span></p>
+        <div class="hero-presenter"><small>PRESENTED BY</small><b>솔루션 사업본부</b><i>×</i><strong>Lad</strong></div>
+      </div>
+    </section>
+
+
+
+
+    <section class="slide" data-title="업무 범위">
+      <header class="slide-meta"><span>02</span><span>SCOPE</span></header>
+      <div class="slide-heading"><p>THREE ECOSYSTEMS</p><h2>관리 프로젝트 생태계</h2></div>
+      <div class="scope-layout">
+        <div class="scope-total"><strong data-count="14">0</strong><span>PROJECTS</span><p>생태계별 상이한 기술 · 규칙 · 배포 구조</p></div>
+        <div class="ecosystems">
+          <article class="ecosystem"><div class="eco-head"><b>01</b><span>CryptoWallet</span></div><ul><li>eximbay-crypto</li></ul></article>
+          <article class="ecosystem featured eximpay-ecosystem" tabindex="0" aria-label="EXIMPay 9개 프로젝트 연결 구조도 열기">
+            <div class="eco-head"><b>09</b><span>EXIMPay</span></div>
+            <ul class="eco-groups">
+              <li><span>PAYMENT APPS</span><b>02</b></li>
+              <li><span>AGENT CLIENTS</span><b>04</b></li>
+              <li><span>BACKOFFICE</span><b>02</b></li>
+              <li><span>KEY UTILITY</span><b>01</b></li>
+            </ul>
+            <div class="eco-map-hint"><i></i><span>HOVER · 연결 구조 보기</span><b>↗</b></div>
+            <div class="eximpay-map" role="img" aria-label="EXIMPay의 백오피스, 연동 클라이언트, SDK, 키 앱과 결제 앱 사이 연결 구조">
+              <header class="map-head">
+                <div><small>EXIMPAY CONNECTION MAP</small><strong>9개 workspace · 하나의 결제 흐름</strong></div>
+                <p><b>5</b><span>INTEGRATION<br>PATHS</span></p>
+              </header>
+              <div class="map-network">
+                <div class="map-cluster cluster-backoffice"><span>BACKOFFICE · 02</span></div>
+                <div class="map-cluster cluster-agent"><span>AGENT · 결제 연동 · 04</span></div>
+                <div class="map-cluster cluster-key"><span>KEY UTILITY · 01</span></div>
+                <div class="map-cluster cluster-payment"><span>PAYMENT APPS · 02</span></div>
+                <svg class="map-links" viewBox="0 0 1000 290" preserveAspectRatio="none" aria-hidden="true">
+                  <defs>
+                    <marker id="arrowRest" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z"/></marker>
+                    <marker id="arrowAar" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z"/></marker>
+                    <marker id="arrowRuntime" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z"/></marker>
+                    <marker id="arrowDirect" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z"/></marker>
+                    <marker id="arrowKey" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z"/></marker>
+                  </defs>
+                  <path class="link-rest" d="M75 77V133"/>
+                  <path class="link-rest" d="M620 250C500 281 258 271 140 151"/>
+                  <path class="link-rest" d="M860 262C630 290 310 286 140 168"/>
+                  <path class="link-aar" d="M275 77C310 101 352 111 402 133"/>
+                  <path class="link-aar" d="M465 77C465 101 443 113 428 133"/>
+                  <path class="link-runtime" d="M397 185C482 202 557 212 647 224"/>
+                  <path class="link-runtime" d="M433 185C585 197 735 207 882 224"/>
+                  <path class="link-direct" d="M640 77C640 126 657 176 684 224"/>
+                  <path class="link-direct" d="M670 77C758 121 848 173 925 224"/>
+                  <path class="link-key" d="M905 77C853 120 787 173 721 224"/>
+                  <path class="link-key" d="M945 77C955 125 961 175 967 224"/>
+                </svg>
+                <div class="map-node node-web"><small>ADMIN</small><b>Backoffice Web</b><span>관리 화면</span></div>
+                <div class="map-node node-table"><small>PRODUCT</small><b>PAY AT TABLE</b><span>상용 연동 앱</span></div>
+                <div class="map-node node-app"><small>TEST CLIENT</small><b>APP CLIENT</b><span>SDK 기능 검증</span></div>
+                <div class="map-node node-pos"><small>TEST CLIENT</small><b>POS CLIENT</b><span>직접 통신 검증</span></div>
+                <div class="map-node node-key"><small>PROVISIONING</small><b>EXIMPay KEY</b><span>출고 키 주입</span></div>
+                <div class="map-node node-api"><small>CONTROL</small><b>Backoffice API</b><span>설정 · 단말 관리</span></div>
+                <div class="map-node node-sdk"><small>INTERFACE</small><b>EXIMPay SDK</b><span>단말별 AAR</span></div>
+                <div class="map-node node-integrated"><small>PAYMENT</small><b>eximpay-integrated</b><span>X990M · P3MIX</span></div>
+                <div class="map-node node-t650p"><small>PAYMENT</small><b>eximpay-t650p</b><span>T650P · Legacy</span></div>
+              </div>
+              <footer class="map-legend">
+                <span class="rest">REST API</span><span class="aar">AAR / SDK</span><span class="runtime">AIDL · INTENT</span><span class="direct">DIRECT / TCP</span><span class="key">KEY INJECTION</span><small>실제 workspace 설정 · README 기준</small>
+              </footer>
+            </div>
+          </article>
+          <article class="ecosystem"><div class="eco-head"><b>04</b><span>AI · MCP</span></div><ul><li>AI-Chatbot</li><li>mcp-room</li><li>jarvis-rag</li><li>MyCron</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide bottleneck-slide" data-title="Bottleneck">
+      <header class="slide-meta"><span>03</span><span>BOTTLENECK</span></header>
+      <div class="slide-heading bottleneck-heading">
+        <p>THE HUMAN BOTTLENECK</p>
+        <h2>병목</h2>
+        <small>병렬화된 실행 · 한 사람에게 집중된 맥락 해석과 의사결정</small>
+      </div>
+      <div class="bottleneck-stage">
+        <div class="context-sources">
+          <p>PROJECT ECOSYSTEMS</p>
+          <article><b>CryptoWallet</b><span>체인별 규칙 · 보안 · 지갑 상태</span></article>
+          <article><b>EXIMPay</b><span>결제 흐름 · 다중 스택 · 운영 영향</span></article>
+          <article><b>AI · MCP</b><span>데이터 · 도구 권한 · 모델 동작</span></article>
+        </div>
+        <svg class="bottleneck-lines" width="1200" height="470" aria-hidden="true">
+          <path class="in-line" data-from="source-0" data-to="gate-left"></path>
+          <path class="in-line" data-from="source-1" data-to="gate-left"></path>
+          <path class="in-line" data-from="source-2" data-to="gate-left"></path>
+          <path class="out-line" data-from="gate-right" data-to="queue-0"></path>
+          <path class="out-line" data-from="gate-right" data-to="queue-1"></path>
+          <path class="out-line" data-from="gate-right" data-to="queue-2"></path>
+        </svg>
+        <div class="human-gate">
+          <small>DECISION CAPACITY</small>
+          <img class="human-profile" src="assets/profile/human-profile.png" alt="" aria-hidden="true" />
+          <strong>HUMAN</strong>
+          <span>우선순위 · 범위<br>예외 · 최종 책임</span>
+        </div>
+        <div class="decision-queue">
+          <p>AGENT WORK QUEUE</p>
+          <article><b>WORK 01</b><span>범위 확정 대기</span></article>
+          <article><b>WORK 02</b><span>우선순위 판단 대기</span></article>
+          <article><b>WORK 03</b><span>예외·최종 결정 대기</span></article>
+        </div>
+        <div class="bottleneck-thesis"><b>에이전트 실행량 증가 → 사람의 결정 대기열 증가</b><span>코딩 속도가 아닌, 서비스 맥락과 책임 있는 판단의 처리량</span></div>
+      </div>
+    </section>
+
+    <section class="slide dark-slide failure-slide" data-title="초기 운영 한계">
+      <header class="slide-meta"><span>04</span><span>EARLY FAILURE</span></header>
+      <div class="slide-heading failure-heading"><p>AGENTS WITHOUT A PROCESS</p><h2>기존의 업무 방식</h2><small>역할 · 작업 계약 · 완료 기준 없이 요청 단위로 Agent 투입</small></div>
+      <div class="failure-stage">
+        <div class="failure-request-stack" aria-label="처리 대기 중인 작업 요청이 누적된 상태">
+          <span><b>운영 요청</b><em>WAITING</em></span>
+          <span><b>결함 수정</b><em>WAITING</em></span>
+          <span><b>신규 기능</b><em>WAITING</em></span>
+        </div>
+        <div class="failure-human"><small>HUMAN</small><em class="request-backlog">+7 대기</em><b>작업 요청</b><span>병목 해소를 위한<br>Agent 병렬 투입</span></div>
+        <svg class="failure-lines" viewBox="0 0 1200 330" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M184 178 C350 178 420 61 578 61"/><path d="M184 178 C350 178 430 163 578 163"/><path d="M184 178 C350 178 420 265 578 265"/>
+          <path class="warning-line" d="M744 61 L974 61"/><path class="warning-line" d="M744 163 L974 163"/><path class="warning-line" d="M744 265 L974 265"/>
+        </svg>
+        <div class="unruled-agents">
+          <article><b>AGENT A</b><span>각자 범위 해석</span></article>
+          <article><b>AGENT B</b><span>각자 방식 선택</span></article>
+          <article><b>AGENT C</b><span>각자 완료 판단</span></article>
+        </div>
+        <div class="failure-results">
+          <article><b>범위 확장</b><span>요청 밖의 변경</span></article>
+          <article><b>중복 작업</b><span>같은 파일·기능 수정</span></article>
+          <article><b>완료 기준 상이</b><span>구현·검수 완료 혼재</span></article>
+        </div>
+        <div class="state-mismatch"><small>RECORD MISMATCH</small><b>Jira ≠ Spec ≠ Git</b><span>서로 다른 작업 상태</span></div>
+        <div class="failure-thesis"><span>Agent 수 증가</span><i>→</i><span>조정·재확인 업무 증가</span><i>→</i><strong>HUMAN BOTTLENECK 재발</strong></div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="업무 표준화">
+      <header class="slide-meta"><span>05</span><span>STANDARD</span></header>
+      <div class="slide-heading"><p>EXTERNAL MEMORY</p><h2>공통 규칙과 <em>작업 계약</em> 우선 수립</h2></div>
+      <div class="document-stage">
+        <article class="document doc-convention"><small>GLOBAL STANDARD</small><h3>Convention</h3><b class="doc-analogy">표준 운전 규칙</b><p class="doc-summary">모든 Workspace 공통 역할·권한·완료 기준</p><ul class="doc-points"><li>Agent 역할과 책임</li><li>Git · Jira 권한 경계</li><li>검수·완료 게이트</li></ul></article>
+        <article class="document doc-project"><small>WORKSPACE SETUP</small><h3>project.md</h3><b class="doc-analogy">설비 세팅값</b><p class="doc-summary">투입된 프로젝트를 식별하는 Workspace별 설정</p><ul class="doc-points"><li>Jira 프로젝트 키</li><li>담당자·분류·라벨</li><li>로컬 규칙·문서 위치</li></ul></article>
+        <article class="document doc-spec"><small>WORK CONTRACT</small><h3>Spec</h3><b class="doc-analogy">작업 지시서</b><p class="doc-summary">한 작업의 범위와 완료 조건을 고정하는 계약</p><ul class="doc-points"><li>단계별 체크리스트</li><li>수락 기준·영향 분석</li><li>검수·테스트 이력</li></ul><strong>사람 ↔ Agent 작업 계약</strong></article>
+        <article class="document doc-evidence"><small>EXECUTION EVIDENCE</small><h3>Evidence</h3><b class="doc-analogy">품질 검사 기록</b><p class="doc-summary">실행 결과와 품질 판정에 대한 추적 기록</p><ul class="doc-points"><li>Build · Test 결과</li><li>Review 판정</li><li>Commit·상태 동기화</li></ul></article>
+      </div>
+    </section>
+
+    <section class="slide team-slide" data-title="Agent Team">
+      <header class="slide-meta"><span>06</span><span>AGENT TEAM</span></header>
+      <div class="slide-heading"><p>ROLE-BASED PRODUCTION LINE</p><h2>역할 기반 업무 공정 분리</h2></div>
+      <div class="developer-bar"><span>DEVELOPER</span><p>역할 정의 · 규칙 · 도구 권한 · 최종 결정</p></div>
+      <div class="role-line">
+        <button class="role-card" data-role="leader"><div class="role-card-head"><b>01</b><img class="role-profile" src="assets/profile/agent-project-leader.svg" alt="Project Leader 프로필"></div><h3>Project Leader</h3><p>조사 · 계획 · 분해</p><span>Spec / Jira</span></button>
+        <button class="role-card" data-role="builder"><div class="role-card-head"><b>02</b><img class="role-profile" src="assets/profile/agent-builder.svg" alt="Builder 프로필"></div><h3>Builder</h3><p>구현 · 자체 검증</p><span>Code / Log</span></button>
+        <button class="role-card" data-role="tester"><div class="role-card-head"><b>03</b><img class="role-profile" src="assets/profile/agent-tester.svg" alt="Tester 프로필"></div><h3>Tester</h3><p>Reviewer 판정 시 조건부 검증</p><span>TEST GO</span></button>
+        <button class="role-card" data-role="reviewer"><div class="role-card-head"><b>04</b><img class="role-profile" src="assets/profile/agent-reviewer.svg" alt="Reviewer 프로필"></div><h3>Reviewer</h3><p>계약 대조 · 최종 판정</p><span>GO / NO GO</span></button>
+      </div>
+      <p class="interaction-hint">역할 클릭 · 실제 자동화 흐름과 권한 경계</p>
+    </section>
+
+    <section class="slide" data-title="에이전트 활용">
+      <header class="slide-meta"><span>07</span><span>USAGE</span></header>
+      <div class="slide-heading"><p>BEYOND CODE GENERATION</p><h2>코드 작성 및 <em>업무 흐름 전체에 사용</em></h2></div>
+      <div class="usage-layout">
+        <div class="workflow-track">
+          <div class="track-line"><i></i></div>
+          <article><b>01</b><h3>조사</h3><p>현재 상태·문서·코드</p></article>
+          <article><b>02</b><h3>계획</h3><p>ADR·Plan·Spec</p></article>
+          <article><b>03</b><h3>구현</h3><p>단계별 변경</p></article>
+          <article><b>04</b><h3>검수</h3><p>Review·Test</p></article>
+          <article><b>05</b><h3>기록</h3><p>Jira·Git·Spec</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide process-slide" data-title="작업 공정" data-process-step="0">
+      <header class="slide-meta"><span>08</span><span>PROCESS</span></header>
+      <div class="slide-heading process-heading">
+        <p>FROM MANUAL WORK TO MANAGED FLOW</p>
+        <h2>전체 업무 프로세스</h2>
+        <small>사람이 직접 수행하던 전 과정을 Agent 실행과 System Record로 단계적으로 분리합니다.</small>
+      </div>
+
+      <div class="process-evolution" aria-label="업무 프로세스 전환 단계">
+        <div class="process-step-tabs" role="tablist" aria-label="프로세스 레이어">
+          <button class="process-step-tab active" type="button" role="tab" aria-selected="true" data-process-step-target="0"><b>01</b><span>HUMAN ONLY</span></button>
+          <button class="process-step-tab" type="button" role="tab" aria-selected="false" data-process-step-target="1"><b>02</b><span>+ AGENT</span></button>
+          <button class="process-step-tab" type="button" role="tab" aria-selected="false" data-process-step-target="2"><b>03</b><span>+ SYSTEM RECORD</span></button>
+        </div>
+        <div class="process-state-copy" aria-live="polite">
+          <b id="processStateTitle">모든 단계를 사람이 직접 수행</b>
+          <span id="processStateCaption">조사부터 기록까지, 실행과 판단이 한 사람에게 집중됩니다.</span>
+        </div>
+        <button class="process-next-step" type="button">AGENT LAYER 열기 <span aria-hidden="true">→</span></button>
+      </div>
+
+      <div class="process-board">
+        <div class="process-stage-labels" aria-hidden="true"><span>요구</span><span>조사</span><span>계약</span><span>구현</span><span>검증</span><span>기록</span></div>
+        <div class="process-lanes">
+          <article class="process-lane process-human-lane">
+            <header><span class="lane-dot"></span><div><b>HUMAN</b><small>판단과 승인</small></div><div class="human-load"><span>HUMAN WORK</span><i></i><i></i><i></i><i></i><i></i><i></i></div></header>
+            <div class="process-lane-track">
+              <div class="process-card manual-task c1"><b>요구 정의</b><span>목표·우선순위 결정</span></div>
+              <div class="process-card manual-task c2"><b>현황 조사</b><span>코드·문서 직접 탐색</span></div>
+              <div class="process-card manual-task c3"><b>계획·명세</b><span>범위와 조건 작성</span></div>
+              <div class="process-card manual-task c4"><b>직접 구현</b><span>변경 작업 수행</span></div>
+              <div class="process-card manual-task c5"><b>직접 검수</b><span>결과·예외 확인</span></div>
+              <div class="process-card manual-task c6"><b>상태·이력</b><span>Jira·Git·문서 기록</span></div>
+
+              <div class="process-card retained-task c1"><b>방향·범위</b><span>무엇을 왜 할지 결정</span></div>
+              <div class="process-card retained-task c3"><b>Spec 승인</b><span>작업 계약 확정</span></div>
+              <div class="process-card retained-task c5"><b>예외 판단</b><span>비정상 상황 의사결정</span></div>
+              <div class="process-card retained-task human-record-task c6"><b>기록 확인</b><span>상태·이력 수동 관리</span></div>
+            </div>
+          </article>
+
+          <article class="process-lane process-agent-lane">
+            <header><span class="lane-dot"></span><div><b>AGENT</b><small>조사·실행·검증</small></div><strong>AUTONOMOUS EXECUTION</strong></header>
+            <div class="process-lane-track">
+              <div class="process-card c2"><b>현황 조사</b><span>현재 상태·영향 분석</span></div>
+              <div class="process-card c3"><b>ADR / Spec 초안</b><span>실행 가능한 계약 구성</span></div>
+              <div class="process-card c4"><b>Builder</b><span>단계별 구현</span></div>
+              <div class="process-card c5"><b>Reviewer · Tester</b><span>검수·조건부 테스트</span></div>
+            </div>
+          </article>
+
+          <article class="process-lane process-system-lane">
+            <header><span class="lane-dot"></span><div><b>SYSTEM OF RECORD</b><small>상태와 증적</small></div><strong>AUTOMATIC TRACE</strong></header>
+            <div class="process-lane-track">
+              <div class="process-card c3"><b>Jira ↔ Spec</b><span>계약 양방향 연결</span></div>
+              <div class="process-card c4"><b>진행 상태</b><span>착수·검수 상태 동기화</span></div>
+              <div class="process-card c5"><b>검수 증적</b><span>Test·Review 이력</span></div>
+              <div class="process-card c6"><b>완료 기록</b><span>Jira QA · Spec DONE · Git</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="process-footer">
+        <p><b>핵심 변화</b><span id="processThesis">Human이 실행·기록까지 떠안아 병목이 발생</span></p>
+        <small>버튼을 클릭해 책임 레이어를 확장</small>
+      </div>
+    </section>
+
+    <section class="slide dark-slide workcell-slide" data-title="Workspace 투입">
+      <header class="slide-meta"><span>09</span><span>WORKSPACE LOADING</span></header>
+      <div class="slide-heading workcell-heading"><p>ONE MACHINE · MANY WORKSPACES</p><h2>하나의 Agent 설비에 <em>Workspace 투입</em></h2></div>
+      <div class="workcell-stage">
+        <div class="load-zone"><small>HUMAN LOAD APPROVAL</small><b>WORKSPACE INPUT</b><span>프로젝트 코드 · 규칙 · 현재 상태</span></div>
+        <div class="unload-zone"><small>TRACEABLE RESULT</small><b>PROJECT OUTPUT</b><span>Code · Test · Jira · Git · Spec</span></div>
+        <div class="factory-conveyor"><i></i></div>
+        <div class="agent-workcell">
+          <div class="machine-head"><span><i></i><i></i><i></i> RUNNING</span><b>GLOBAL AGENT WORKCELL</b><small>STANDARD EQUIPMENT 01</small></div>
+          <div class="machine-body">
+            <div class="machine-port input-port"><span>IN</span></div>
+            <div class="context-scanner"><small>CONTEXT READER</small><b>project.md</b><span>Local Convention</span><span>Spec</span><i></i></div>
+            <div class="machine-modules">
+              <span><b>01</b>LEADER</span><span><b>02</b>BUILDER</span><span class="conditional"><b>03</b>TESTER<small>IF REQUIRED</small></span><span><b>04</b>REVIEWER</span>
+            </div>
+            <div class="machine-port output-port"><span>OUT</span></div>
+          </div>
+          <div class="machine-base"><span>동일한 역할 · 동일한 권한 경계 · Workspace별 공정 세팅</span></div>
+        </div>
+        <div class="workspace-pallet pallet-a"><small>WORKSPACE</small><b>CryptoWallet</b><span>SBD · Wallet Rules</span></div>
+        <div class="workspace-pallet pallet-b"><small>WORKSPACE</small><b>EXIMPay</b><span>SBD · Payment Rules</span></div>
+        <div class="workspace-pallet pallet-c"><small>WORKSPACE</small><b>AI · MCP</b><span>JARVIS · RAG Rules</span></div>
+        <div class="scan-flash">LOCAL CONTEXT LOADED</div>
+        <p class="workcell-thesis"><b>프로젝트별 Agent Team 복제 불필요</b><span>투입된 Workspace의 로컬 규칙과 작업 계약을 판독하는 단일 설비</span></p>
+      </div>
+    </section>
+
+    <section class="slide dark-slide worktree-slide" data-title="Worktree·Lane">
+      <header class="slide-meta"><span>10</span><span>PARALLEL WORKSPACES</span></header>
+      <div class="slide-heading worktree-heading"><p>WORKTREE · MULTI-DIMENSION WORKSPACE</p><h2>Worktree 기반 다중 작업 공간</h2><small>개별 Spec 투입을 통한 Lane 병렬 실행</small></div>
+      <div class="dimension-stage">
+        <div class="dimension-labels"><span>REPOSITORY</span><span>WORKSPACE DIMENSION</span><span>SPEC INPUT</span><span>AGENT EXECUTION</span><span>MERGE</span></div>
+        <div class="repo-root"><small>SAME REPOSITORY</small><b>eximbay-crypto</b><span>공통 Commit History</span></div>
+        <svg class="dimension-connectors" viewBox="0 0 1200 390" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M132 206 L190 206 L230 87"/><path d="M190 206 L230 206"/><path d="M190 206 L230 325"/>
+          <path class="merge-path" d="M1042 87 L1070 87 L1098 206"/><path class="merge-path" d="M1042 206 L1098 206"/><path class="merge-path" d="M1042 325 L1070 325 L1098 206"/>
+        </svg>
+        <div class="dimension-lanes">
+          <article class="dimension-lane lane-a">
+            <div class="dimension-worktree"><small>LANE 1 · DIMENSION A</small><b>WORKTREE A</b><span>feature/A · Agent A</span></div>
+            <div class="spec-input"><span>SPEC A-1</span><i>→</i><span>SPEC A-2</span><i>→</i><span>SPEC A-3</span></div>
+            <div class="lane-agent"><b>AGENT PROCESS</b><span>Builder · Quality Gate</span></div>
+            <div class="lane-status">RUN</div>
+          </article>
+          <article class="dimension-lane lane-b">
+            <div class="dimension-worktree"><small>LANE 2 · DIMENSION B</small><b>WORKTREE B</b><span>feature/B · Agent B</span></div>
+            <div class="spec-input"><span>SPEC B-1</span><i>→</i><span>SPEC B-2</span></div>
+            <div class="lane-agent"><b>AGENT PROCESS</b><span>Builder · Quality Gate</span></div>
+            <div class="lane-status">RUN</div>
+          </article>
+          <article class="dimension-lane lane-c">
+            <div class="dimension-worktree"><small>LANE 3 · DIMENSION C</small><b>WORKTREE C</b><span>feature/C · Agent C</span></div>
+            <div class="spec-input"><span>SPEC C-1</span><i>→</i><span>SPEC C-2</span><i>→</i><span>SPEC C-3</span></div>
+            <div class="lane-agent"><b>AGENT PROCESS</b><span>Builder · Quality Gate</span></div>
+            <div class="lane-status">RUN</div>
+          </article>
+        </div>
+        <div class="stage-target"><small>INTEGRATION</small><b>stage</b><span>Lane 결과 통합</span></div>
+      </div>
+      <div class="dimension-rule"><span><b>각 Worktree</b> 독립 Branch · Directory · Agent Context</span><i></i><span><b>Lane 내부</b> Spec 순차 처리</span><i></i><span><b>Lane 간</b> 동시 실행</span><em>활용 사례 · 현재 Worktree 12개 / Plan 8개 Lane</em></div>
+    </section>
+
+    <section class="slide compare-slide" data-title="제조업 공정 대조">
+      <header class="slide-meta"><span>11</span><span>PROCESS ANALOGY</span></header>
+      <div class="slide-heading"><p>HARDWARE ↔ SOFTWARE</p><h2>제조업 공정과 Agent 공정의 <em>동일 구조</em></h2></div>
+      <div class="process-compare">
+        <div class="compare-label manufacturing-label">HARDWARE<br>MANUFACTURING<br>PROCESS</div>
+        <div class="manufacturing-flow">
+          <article style="--photo:url('assets/factory/prepared/01-process-design.jpg')"><b>01</b><h3>제품 설계</h3><p>무엇을 만들지 정의</p></article>
+          <article style="--photo:url('assets/factory/prepared/04-robotic-cell.jpg')"><b>02</b><h3>가공·조립</h3><p>작업 셀 실행</p></article>
+          <article style="--photo:url('assets/factory/prepared/06-automated-equipment.jpg')"><b>03</b><h3>공정 검사</h3><p>불량을 다음 단계에서 차단</p></article>
+          <article style="--photo:url('assets/factory/prepared/05-conveyor-line.jpg')"><b>04</b><h3>출하·이력</h3><p>완성품과 생산 기록</p></article>
+        </div>
+        <div class="mapping-arrows"><span>↓</span><span>↓</span><span>↓</span><span>↓</span></div>
+        <div class="compare-label agent-label">SOFTWARE<br>MANUFACTURING<br>PROCESS</div>
+        <div class="agent-flow">
+          <article><b>요구사항 · ADR · Spec 작성</b><p>목적·설계 결정·작업 계약 정의</p></article>
+          <article><b>Builder</b><p>단계별 구현과 실행 증거</p></article>
+          <article><b>Reviewer · 필요 시 Tester</b><p>조건부 품질 게이트</p></article>
+          <article><b>Jira · Git · Spec</b><p>결과와 의사결정 추적</p></article>
+        </div>
+      </div>
+      <p class="compare-thesis">생산 라인과 같은 <b>역할·품질 게이트</b> 통과 구조</p>
+    </section>
+
+    <section class="slide conclusion" data-title="결론">
+      <div class="ambient-grid"></div>
+      <header class="slide-meta"><span>12</span><span>CONCLUSION</span></header>
+      <div class="conclusion-flow"><span>이해</span><i></i><span>분해</span><i></i><span>실행</span><i></i><span>검증</span><i></i><span>기록</span><div class="conclusion-pulse"></div></div>
+      <div class="conclusion-copy"><p>PROCESS OWNERSHIP</p><h2>AI — <em>실행과 증거</em><br>개발자 — <strong>서비스 맥락과 최종 책임</strong></h2></div>
+      <div class="tradeoffs"><div><b>효과</b><span>컨텍스트 복원</span><span>작업 추적성</span><span>병렬 작업 통제</span></div><div><b>비용</b><span>중복 컨텍스트</span><span>문서 유지보수</span><span>도구 실패·재시도</span></div></div>
+    </section>
+
+    <section class="slide dark-slide arch-slide plain-slide" data-title="MCP Room">
+      <header class="slide-meta"><span>13</span><span>AI · MCP — 01</span></header>
+      <div class="slide-heading arch-heading"><p>AGENT-TO-AGENT CHAT ROOM</p><h2>MCP Room</h2><small>에이전트끼리 한 채팅방에서 직접 대화하게 한다</small></div>
+
+      <div class="plain-problem">
+        <b>문제</b>
+        <div class="plain-scatter"><span>프로젝트 A 에이전트</span><span>프로젝트 B 에이전트</span></div>
+        <p>서로 모르는 채로 일하니 <em>사람이 양쪽 말을 옮겨 나른다</em></p>
+      </div>
+
+      <div class="plain-steps">
+        <article>
+          <b>01</b>
+          <h3>방을 만든다</h3>
+          <p>논의할 주제와 참여 규칙을 정한다</p>
+          <div class="plain-visual room-open"><i></i><i></i><i></i><em>ROOM</em></div>
+        </article>
+        <article>
+          <b>02</b>
+          <h3>에이전트를 부른다</h3>
+          <p>각자 다른 프로젝트에서 일하던<br>에이전트들이 같은 방에 입장한다</p>
+          <div class="plain-visual room-join"><s>A</s><s>B</s><s>C</s></div>
+        </article>
+        <article>
+          <b>03</b>
+          <h3>Agent 간 대화가 진행된다</h3>
+          <p>순서를 지켜 발언하고,<br>사람은 지켜보다 필요할 때만 끼어든다</p>
+          <div class="plain-visual room-talk"><u class="l"></u><u class="r"></u><u class="l"></u></div>
+        </article>
+      </div>
+
+      <div class="plain-example">
+        <div class="plain-q"><small>상황</small><b>“결제 실패 응답 형식을 맞춰야 한다”</b></div>
+        <i>→</i>
+        <div class="plain-a">
+          <small>방에서 벌어지는 일</small>
+          <div><span>백엔드</span>에러 코드를 이렇게 내보내겠다</div>
+          <div><span>프론트</span>그 형식이면 화면에서 못 읽는다</div>
+          <div><span>사람</span>프론트 안대로 가자</div>
+        </div>
+        <p class="plain-point"><b>핵심</b>사람이 <em>양쪽을 오가며 전달하고 재확인하는 일</em>이 사라진다 — 합의된 결과만 받는다</p>
+      </div>
+    </section>
+
+    <section class="slide dark-slide arch-slide plain-slide" data-title="Jarvis RAG">
+      <header class="slide-meta"><span>14</span><span>AI · MCP — 02</span></header>
+      <div class="slide-heading arch-heading"><p>PERSONAL KNOWLEDGE RETRIEVAL</p><h2>Jarvis RAG</h2><small>흩어진 내 작업 기록을, 말로 물어서 찾는다</small></div>
+
+      <div class="plain-problem">
+        <b>문제</b>
+        <div class="plain-scatter"><span>Jira 티켓</span><span>Git 커밋</span><span>Confluence 문서</span><span>작업 지시서</span></div>
+        <p>기록은 네 군데에 남지만, <em>"그거 언제 왜 했더라"</em>는 사람 기억에만 남는다</p>
+      </div>
+
+      <div class="plain-steps">
+        <article>
+          <b>01</b>
+          <h3>Agent 데이터 수집</h3>
+          <div class="plain-visual rag-collect">
+            <span><img src="assets/icons/git.svg" alt="Git">Git</span>
+            <span><img src="assets/icons/jira.svg" alt="Jira"><img src="assets/icons/confluence.svg" alt="Confluence">Jira · Confluence</span>
+            <span><img src="assets/icons/local-mac.svg" alt="로컬 맥">로컬 Mac</span>
+          </div>
+        </article>
+        <article>
+          <b>02</b>
+          <h3>의미별 분류</h3>
+          <p>글을 <em>의미 좌표</em>로 변환해<br>비슷한 뜻끼리 가까이 놓는다</p>
+          <div class="plain-visual rag-cluster">
+            <s class="c1"></s><s class="c2"></s><s class="c3"></s><s class="c4"></s>
+            <s class="d1"></s><s class="d2"></s><s class="d3"></s>
+            <s class="e1"></s><s class="e2"></s>
+          </div>
+        </article>
+        <article>
+          <b>03</b>
+          <h3>Agent 로 조회 요청</h3>
+          <p>검색어가 아니라 문장으로 물으면<br>관련 기록을 묶어서 돌려준다</p>
+          <div class="plain-visual rag-ask"><em>“어제 내가 뭐 했지?”</em></div>
+        </article>
+      </div>
+
+      <div class="plain-example">
+        <div class="plain-q"><small>질문</small><b>“어제 내가 뭐 했지?”</b></div>
+        <i>→</i>
+        <div class="plain-a">
+          <small>찾아온 기록</small>
+          <div><span>Git</span>커밋 8건</div>
+          <div><span>Jira</span>티켓 완료 처리 3건</div>
+          <div><span>문서</span>회의록·명세 2건 갱신</div>
+        </div>
+        <p class="plain-point"><b>핵심</b>Git·Jira·문서에 흩어진 <em>어제의 작업 기록</em>을 한 번에 모아 업무 단위로 요약한다</p>
+      </div>
+
+      <div class="jarvis-arch">
+        <div class="jarvis-arch-row">
+          <article class="jarvis-box box-client"><b>Kiro</b><small>MCP Client</small></article>
+          <i class="jarvis-arrow">→</i>
+          <article class="jarvis-box box-server"><b>RAG Server</b><small>FastAPI</small></article>
+          <i class="jarvis-arrow">→</i>
+          <article class="jarvis-box box-embed"><b>Ollama</b><small>bge-m3 임베딩</small></article>
+          <i class="jarvis-arrow">→</i>
+          <article class="jarvis-box box-store"><b>Qdrant</b><small>Vector DB</small></article>
+        </div>
+        <p class="jarvis-arch-note">4개 컴포넌트 모두 <b>Docker로 로컬 구동</b> — 외부로 데이터가 나가지 않는다</p>
+      </div>
+    </section>
+
+    <section class="slide dark-slide arch-slide plain-slide" data-title="MyCron">
+      <header class="slide-meta"><span>15</span><span>AI · MCP — 03</span></header>
+      <div class="slide-heading arch-heading"><p>AGENT SCHEDULER</p><h2>MyCron</h2><small>정해둔 시간에 에이전트가 스스로 실행된다</small></div>
+
+      <div class="plain-problem">
+        <b>문제</b>
+        <div class="plain-scatter"><span>매일 같은 보고</span><span>매주 같은 정리</span></div>
+        <p>반복 업무인데도 <em>매번 사람이 시작 버튼을 눌러야</em> 한다</p>
+      </div>
+
+      <div class="plain-steps">
+        <article>
+          <b>01</b>
+          <h3>시간과 할 일을 적는다</h3>
+          <p>언제 · 어느 에이전트 · 무슨 지시<br>세 가지만 적어두면 끝난다</p>
+          <div class="plain-visual cron-set">
+            <img src="assets/icons/clock.svg" alt="스케줄">
+            <s>평일 09:00</s><s>jarvis</s>
+          </div>
+        </article>
+        <article>
+          <b>02</b>
+          <h3>시간이 되면 자동 실행</h3>
+          <p>사람이 없어도 에이전트가 깨어나<br>지시받은 작업을 수행한다</p>
+          <div class="plain-visual cron-fire"><u></u><u></u><u class="hit"></u><u></u><u></u><em>RUN</em></div>
+        </article>
+        <article>
+          <b>03</b>
+          <h3>결과와 이력 확인</h3>
+          <p>메뉴바 앱에서 결과를 보고,<br>실행 기록은 자동으로 남는다</p>
+          <div class="plain-visual cron-log"><u></u><u></u><u></u></div>
+        </article>
+      </div>
+
+      <div class="cron-schedule-board">
+        <header><small>REGISTERED JOBS</small><b>등록된 자동 실행 스케줄</b><span>3 ACTIVE</span></header>
+        <div class="cron-schedule-grid">
+          <article class="featured">
+            <time>평일 09:00</time>
+            <b>데일리 스크럼 초안 작성</b>
+            <p>전날 Git·Jira·문서 작업을 조회해 요약</p>
+          </article>
+          <article>
+            <time>월요일 09:00</time><small>WEEKLY</small>
+            <b>주간 회의 보고서 초안</b>
+            <p>지난주 완료·진행 작업을 회의 단위로 정리</p>
+          </article>
+          <article>
+            <time>평일 17:00</time><small>DAILY</small>
+            <b>작업 기록 정리·보관</b>
+            <p>그날 Git·Jira·문서 변경분을 자동 인덱싱</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide dark-slide arch-slide plain-slide bot-slide" data-title="AI Chatbot">
+      <header class="slide-meta"><span>16</span><span>AI · MCP — 04</span></header>
+      <div class="slide-heading arch-heading"><p>MULTI-AGENT SERVICE GATEWAY</p><h2>AI Chatbot</h2><small>Slack에서 물어보면 대신 찾아서 답해주는 사내 챗봇</small></div>
+
+      <div class="plain-problem">
+        <b>문제</b>
+        <div class="plain-scatter"><span>통계 뽑아주세요</span><span>이 API 어떻게 붙여요?</span></div>
+        <p>물어볼 곳이 <em>사람</em>이라, 담당자를 찾고 기다려야 한다</p>
+      </div>
+
+      <div class="plain-steps">
+        <article>
+          <b>01</b>
+          <h3>Slack에서 질문</h3>
+          <p>평소 쓰는 메신저에 그대로 물어본다</p>
+          <div class="plain-visual bot-ask"><img src="assets/icons/slack.svg" alt="Slack"><em>“어제 결제 실패 몇 건?”</em></div>
+        </article>
+        <article>
+          <b>02</b>
+          <h3>챗봇이 직접 조회</h3>
+          <p>필요한 도구를 스스로 골라<br>데이터와 문서를 찾아온다</p>
+          <div class="plain-visual bot-tools"><s>데이터 조회</s><s>문서 검색</s><s>차트 생성</s></div>
+        </article>
+        <article>
+          <b>03</b>
+          <h3>표 · 차트로 답</h3>
+          <p>숫자는 그림으로 그려서 돌려준다</p>
+          <div class="plain-visual bot-chart"><u></u><u></u><u></u><u></u><u></u></div>
+        </article>
+      </div>
+
+      <div class="bot-showcase">
+        <header><small>실제 운영 중인 챗봇</small><b>6</b><span>업무별로 각자 다른 일을 맡는다</span></header>
+        <div class="bot-lineup">
+          <span>
+            <i><img src="assets/icons/chart.svg" alt=""></i>
+            <b>Tableau</b>
+            <u>자연어로 물으면<br>DB 조회해 통계로 답한다</u>
+          </span>
+          <span>
+            <i><img src="assets/icons/confluence.svg" alt=""></i>
+            <b>EximWiki</b>
+            <u>사내 위키를 검색해 답하고<br>문서를 정리한다</u>
+          </span>
+          <span>
+            <i><img src="assets/icons/chat.svg" alt=""></i>
+            <b>EXIMLink</b>
+            <u>서비스 문의에 응대하고<br>도입 상담을 접수한다</u>
+          </span>
+          <span>
+            <i><img src="assets/icons/local-mac.svg" alt=""></i>
+            <b>EXIMPay B/O</b>
+            <u>백오피스 기능별<br>사용법을 안내한다</u>
+          </span>
+          <span>
+            <i><img src="assets/icons/jira.svg" alt=""></i>
+            <b>Jira Onboarding</b>
+            <u>가맹점 웹사이트 심사 항목을<br>자동으로 점검한다</u>
+          </span>
+          <span>
+            <i><img src="assets/icons/survey.svg" alt=""></i>
+            <b>Survey Analysis</b>
+            <u>낮은 평가를 받은 대화의<br>원인을 분석한다</u>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide image-finale" data-title="AI — 최고의 도구">
+      <img src="assets/conclusion/ai-best-tool-qa-dog-one-line.png" alt="한 줄 헤드라인과 Q&amp;A 엠블럼, 중앙 강아지가 있는 AI 활용 포스터">
+    </section>
+  </main>
+
+  <aside id="roleModal" class="role-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="roleTitle">
+    <button class="modal-close" aria-label="역할 상세 닫기">×</button>
+    <div class="role-modal-shell">
+      <header class="role-modal-head">
+        <div class="role-index"></div>
+        <div class="role-copy"><p class="role-type">AUTOMATED WORKFLOW</p><h2 id="roleTitle"></h2><p class="role-mission"></p></div>
+      </header>
+      <div class="chat-automation-layout">
+        <section class="agent-chat-room">
+          <header class="chat-room-head">
+            <img class="chat-avatar" src="assets/profile/agent-project-leader.svg" alt="Project Leader 프로필">
+            <div><b class="chat-agent-name"></b><span>작업자와 Agent 대화</span></div>
+            <i><em></em> ONLINE</i>
+          </header>
+          <div class="chat-thread" aria-live="polite"></div>
+          <div class="chat-compose"><span>메시지를 보내면 Agent 공정 자동 실행</span><b>↵</b></div>
+        </section>
+        <aside class="automation-activity">
+          <header class="activity-head">
+            <div><small>AGENT ACTIVITY</small><b>자동 처리</b></div>
+            <div class="connected-tools" title="연결된 도구">
+              <img src="assets/icons/confluence.svg" alt="Confluence">
+              <img src="assets/icons/jira.svg" alt="Jira">
+              <img src="assets/icons/git.svg" alt="Git">
+            </div>
+          </header>
+          <div class="activity-feed"></div>
+          <div class="activity-results"></div>
+        </aside>
+      </div>
+      <div class="chat-flow-note"><b></b><span></span></div>
+      <footer class="role-demo-controls">
+        <div class="role-step-state"><span class="role-step-count">01 / 03</span><div class="role-step-progress"><i></i></div><small>단계별 대화 · 도구 실행 · 상태 반영</small></div>
+        <div class="role-control-buttons"><button class="role-prev-step" type="button">← PREV</button><button class="role-play" type="button">PAUSE</button><button class="role-next-step" type="button">NEXT STEP →</button></div>
+      </footer>
+    </div>
+  </aside>
+
+  <nav class="deck-nav" aria-label="슬라이드 탐색">
+    <button id="prev" aria-label="이전 슬라이드">←</button><span id="current">01</span><i><b id="progress"></b></i><span id="totalSlides">17</span><button id="next" aria-label="다음 슬라이드">→</button>
+  </nav>
+  <div class="key-help"><span>← → 이동</span><span>F 전체화면</span><span>ESC 닫기</span></div>
+  <script src="app.js?v=0826-bots5"></script>
+</body>
+</html>

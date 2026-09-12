@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Tester 프로필</title>
+  <desc id="desc">초록색 품질 배지와 밝은 재킷을 착용한 테스터 일러스트</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#125447"/>
+      <stop offset="1" stop-color="#071a33"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6fff7"/>
+      <stop offset="1" stop-color="#86d9c2"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="34" fill="url(#bg)"/>
+  <circle cx="52" cy="57" r="48" fill="#34d399" opacity=".12"/>
+  <path d="M30 256c5-56 42-84 98-84s93 28 98 84" fill="url(#coat)"/>
+  <path d="M104 162h48v39h-48z" fill="#d69973"/>
+  <ellipse cx="128" cy="110" rx="51" ry="63" fill="#e9ae84"/>
+  <path d="M77 105c-5-45 14-74 52-74 39 0 58 30 50 76-10-5-18-12-25-25-19 14-44 22-77 23z" fill="#4b2f32"/>
+  <path d="M78 102c-9 2-11 15-5 25 3 5 8 8 13 7l-3-31zM178 102c9 2 11 15 5 25-3 5-8 8-13 7l3-31z" fill="#d69973"/>
+  <path d="M99 109c7-4 15-4 22 0M136 109c8-4 16-4 23 0" fill="none" stroke="#543439" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="111" cy="117" r="3.5" fill="#302124"/>
+  <circle cx="149" cy="117" r="3.5" fill="#302124"/>
+  <path d="M128 120l-4 18 9 1M111 150c11 8 23 8 34 0" fill="none" stroke="#92594a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M102 180l26 22 26-22 21 76H81z" fill="#f7fffc"/>
+  <path d="M102 180l26 22-18 23-25-42M154 180l-26 22 18 23 25-42" fill="#88d8c3"/>
+  <circle cx="191" cy="198" r="25" fill="#092d29" stroke="#34d399" stroke-width="4"/>
+  <path d="M179 198l8 8 16-18" fill="none" stroke="#a7f3d0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

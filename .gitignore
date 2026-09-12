@@ -1,0 +1,9 @@
+.DS_Store
+.venv/
+*.log
+output/
+web/render*.png
+web/rendered/
+web/assets/.DS_Store
+web/assets/modern-factory/
+web/assets/rejected-historical-assets/
